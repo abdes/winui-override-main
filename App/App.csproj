@@ -8,6 +8,12 @@
 		<Platforms>x86;x64;ARM64</Platforms>
 		<RuntimeIdentifiers>win10-x86;win10-x64;win10-arm64</RuntimeIdentifiers>
 		<UseWinUI>true</UseWinUI>
+
+		<!-- Use our own Main entry point so we can control the HostBuilder -->
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<DefineConstants>DISABLE_XAML_GENERATED_MAIN</DefineConstants>
+		<StartupObject>App.Program</StartupObject>
+
 	</PropertyGroup>
 
 	<ItemGroup>
